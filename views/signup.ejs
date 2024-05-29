@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f0f0f0 url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 960"%3E%3Cdefs%3E%3ClinearGradient id="a" x1="14.455%" x2="85.545%" y1="38.476%" y2="61.524%"%3E%3Cstop offset="0%" stop-color="%2311DDFF" stop-opacity=".3"/%3E%3Cstop offset="100%" stop-color="%231100FF" stop-opacity=".3"/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill="url(%23a)" fill-rule="evenodd" d="M0 640l48-16c48-16 144-48 240-101.3 96-53.3 192-128 288-128s192 74.7 288 122.7c96 48 192 69.3 240 80l48 10.7v352H0z"/%3E%3C/svg%3E') repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .form-control {
+            border: none;
+            border-bottom: 2px solid #007bff;
+            border-radius: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: #0056b3;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2 class="text-center">Signup</h2>
+        <form action="/signup" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block submit-btn">Signup</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js script links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="
